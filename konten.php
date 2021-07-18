@@ -277,17 +277,25 @@ $profil = $query01->fetch_assoc();
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3">
                         <form role="form" onsubmit="return showInput()">
-                            <div class="form-group"><label class="sr-only" for="name">Name</label><input class="form-control" type="text" id="user_input" name="name" placeholder="Your Name*" required="required" data-validation-required-message="Please enter your name." />
+                            <div class="form-group"><label class="sr-only" for="name">Name</label>
+                            <input class="form-control" type="text" id="user_input" name="name" placeholder="Your Name*" required="required" data-validation-required-message="Please enter your name." />
                                 <p class="help-block text-danger"></p>
                             </div>
-                            <div class="form-group"><label class="sr-only" for="email">Email</label><input class="form-control" type="email" id="user_email" name="email" placeholder="Your Email*" required="required" data-validation-required-message="Please enter your email address."
+                            <div class="form-group"><label class="sr-only" for="email">Email</label>
+                            <input class="form-control" type="email" id="user_email" name="email" placeholder="Your Email*" required="required" data-validation-required-message="Please enter your email address."
                                 />
                                 <p class="help-block text-danger"></p>
                             </div>
-                            <div class="form-group"><textarea class="form-control" rows="7" id="user_pesan" name="message" placeholder="Your Message*" required="required" data-validation-required-message="Please enter your message."></textarea>
+                            <div class="form-group"><label class="sr-only" for="phone">Phone</label>
+                            <input class="form-control" type="number" id="user_goal" name="phone" placeholder="Your Phone*" required="required" data-validation-required-message="Please enter your phone."
+                                />
                                 <p class="help-block text-danger"></p>
                             </div>
-                            <div class="text-center"><button id="link2" target="_blank" onclick="showInput();" class="btn btn-block btn-round btn-d" type="submit">Submit</button></div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="7" id="user_pesan" name="message" placeholder="Your Message*" required="required" data-validation-required-message="Please enter your message."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="text-center"><a id="link2" target="_blank" onclick="showInput();" class="btn btn-block btn-round btn-d" type="submit">Submit</a></div>
                         </form>
                         <div class="ajax-response font-alt" id="contactFormResponse"></div>
                     </div>
@@ -324,11 +332,11 @@ $profil = $query01->fetch_assoc();
 	else if(b == "") {
 		alert("Mohon isi email Anda dengan benar");
 		return false;
-	}
+    }
 	else if(c == "") {
-		alert("Mohon isi kategori keperluan");
+		alert("Mohon isi Telepon Anda dengan benar");
 		return false;
-	}
+    }
 	else if(d == "") {
 		alert("Mohon isi pesan Anda");
 		return false;
