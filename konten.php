@@ -248,14 +248,14 @@ $profil = $query01->fetch_assoc();
                 <div class="row">
                     <div class="col-sm-6 col-md-6 col-lg-4 col-lg-offset-2">
                         <div class="callout-text font-alt">
-                            <h3 class="callout-title">Subscribe now</h3>
-                            <p>We will not spam your email.</p>
+                            <h3 class="callout-title">Konsultasi</h3>
+                            <p>Terbaik dari Yang Terbaik</p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="callout-btn-box">
                             <form id="subscription-form" role="form" method="post" action="https://markup.themewagon.com/titan/php/subscribe.php">
-                                <div class="input-group"><a class="section-scroll" href="#contact"><button class="form-control">Chat Now</button></a>
+                                <div class="input-group"><a class="section-scroll" href="#contact"><button class="form-control">Konsultasi Sekarang</button></a>
                                     <span class="input-group-btn"></span>
                                 </div>
                             </form>
@@ -270,7 +270,7 @@ $profil = $query01->fetch_assoc();
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3">
-                        <h2 class="module-title font-alt">Get in touch</h2>
+                        <h2 class="module-title font-alt">Ngobrol Yuk & jangan ragu lagi terhadap kualitas kami</h2>
                         <div class="module-subtitle font-serif"></div>
                     </div>
                 </div>
@@ -278,21 +278,21 @@ $profil = $query01->fetch_assoc();
                     <div class="col-sm-6 col-sm-offset-3">
                         <form role="form" onsubmit="return showInput()">
                             <div class="form-group"><label class="sr-only" for="name">Name</label>
-                            <input class="form-control" type="text" id="user_input" name="name" placeholder="Your Name*" required="required" data-validation-required-message="Please enter your name." />
+                            <input class="form-control" type="text" id="user_input" name="name" placeholder="Nama*" required="required" data-validation-required-message="Please enter your name." />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group"><label class="sr-only" for="email">Email</label>
-                            <input class="form-control" type="email" id="user_email" name="email" placeholder="Your Email*" required="required" data-validation-required-message="Please enter your email address."
+                            <input class="form-control" type="email" id="user_email" name="email" placeholder="Email*" required="required" data-validation-required-message="Please enter your email address."
                                 />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group"><label class="sr-only" for="phone">Phone</label>
-                            <input class="form-control" type="number" id="user_goal" name="phone" placeholder="Your Phone*" required="required" data-validation-required-message="Please enter your phone."
+                            <input class="form-control" type="number" id="user_goal" name="phone" placeholder="Hp*" required="required" data-validation-required-message="Please enter your phone."
                                 />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" rows="7" id="user_pesan" name="message" placeholder="Your Message*" required="required" data-validation-required-message="Please enter your message."></textarea>
+                                <textarea class="form-control" rows="7" id="user_pesan" name="message" placeholder="Pesanmu*" required="required" data-validation-required-message="Please enter your message."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="text-center"><a id="link2" target="_blank" onclick="showInput();" class="btn btn-block btn-round btn-d" type="submit">Submit</a></div>
