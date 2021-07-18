@@ -322,7 +322,8 @@ $profil = $query01->fetch_assoc();
     var c = document.getElementById("user_goal").value;
     var d = document.getElementById("user_pesan").value;
     var wa = "https://api.whatsapp.com/send?phone=";
-    var sap = "&text=Halo%20*shoelace.id*,%20Saya%20";
+    var sap = "&text=Halo%20*KicksandBags*,%0ASaya%20";
+    var greet = "%20ingin%20berkonsultasi%20dengan%20anda";
 	var enter = "%0A";
 	
 	if (a == "") {
@@ -341,7 +342,7 @@ $profil = $query01->fetch_assoc();
 		alert("Mohon isi pesan Anda");
 		return false;
   	} else {
-		var strLink = wa + str + sap + a + enter + b + enter + c + enter + d;
+		var strLink = wa + str + sap + '(' + a + enter + b + enter + c + enter + d + ')' + greet;
 		document.getElementById("link2").setAttribute("href", strLink);
 		console.log(strLink);
 	}
