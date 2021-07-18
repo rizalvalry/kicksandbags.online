@@ -182,15 +182,7 @@ $profil = $query01->fetch_assoc();
         <div id="'.$row["id_kategori"].'" class="tab-pane fade in active">
         ';
         }
-        else
-        {
-        $tab_menu .= '
-        <li><a class="wow fadeInUp" href="#'.$row["id_kategori"].'" href="#'.$row["id_kategori"].'" data-toggle="tab">'.$row["nama_kategori"].'</a></li>
-        ';
-        $tab_content .= '
-        <div id="'.$row["id_kategori"].'" class="tab-pane fade">
-        ';
-        }
+        
         $product_query = $db->query("SELECT kategori_produk.id_kategori, kategori_produk.nama_kategori, kategori_produk.kategori_seo, id_produk,nama_produk,gambar FROM produk LEFT JOIN subkategori_produk ON produk.id_subkategori=subkategori_produk.id_subkategori LEFT JOIN kategori_produk ON subkategori_produk.id_kategori=kategori_produk.id_kategori WHERE produk.aktif = 'Y' AND kategori_produk.id_kategori = '$row[id_kategori]' ORDER BY id_produk DESC");
         while($sub_row = $product_query->fetch_assoc())
         {
