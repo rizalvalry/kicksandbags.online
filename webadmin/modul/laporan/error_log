@@ -1,0 +1,2 @@
+[29-Nov-2018 16:55:31 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Cezpdf has a deprecated constructor in /home/u4920924/public_html/jrpass-japan.com/webadmin/modul/laporan/class.ezpdf.php on line 5
+[29-Nov-2018 16:55:31 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Cpdf has a deprecated constructor in /home/u4920924/public_html/jrpass-japan.com/webadmin/modul/laporan/class.pdf.php on line 23
