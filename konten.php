@@ -2,10 +2,20 @@
 $query00 = $db->query("SELECT gambar from slide where aktif = 'Y' limit 1");
 $query01 = $db->query("SELECT * from profil limit 1");
 
-
 $slide = $query00->fetch_assoc();
 $profil = $query01->fetch_assoc();
 ?>
+
+
+<!-- whatsapp -->
+<?php
+		$query00 = $db->query("SELECT nomor_hp, nama_toko FROM profil");
+		$rowcrumb = $query00->fetch_assoc();
+		$query75  = $db->query("SELECT nama FROM hubungi WHERE dibuka = 'Y'");
+		$row75    = $query75->fetch_assoc();
+		
+	?>
+<!-- end whatsapp -->
 
 <section class="home-section home-full-height bg-dark bg-gradient" id="home" data-background="gambar/thumb_slide/<?=$slide['gambar']?>">
             <div class="titan-caption">
@@ -266,18 +276,18 @@ $profil = $query01->fetch_assoc();
                 </div>
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3">
-                        <form id="contactForm" role="form" method="post" action="https://markup.themewagon.com/titan/php/contact.php">
-                            <div class="form-group"><label class="sr-only" for="name">Name</label><input class="form-control" type="text" id="name" name="name" placeholder="Your Name*" required="required" data-validation-required-message="Please enter your name." />
+                        <form role="form" onsubmit="return showInput()">
+                            <div class="form-group"><label class="sr-only" for="name">Name</label><input class="form-control" type="text" id="user_input" name="name" placeholder="Your Name*" required="required" data-validation-required-message="Please enter your name." />
                                 <p class="help-block text-danger"></p>
                             </div>
-                            <div class="form-group"><label class="sr-only" for="email">Email</label><input class="form-control" type="email" id="email" name="email" placeholder="Your Email*" required="required" data-validation-required-message="Please enter your email address."
+                            <div class="form-group"><label class="sr-only" for="email">Email</label><input class="form-control" type="email" id="user_email" name="email" placeholder="Your Email*" required="required" data-validation-required-message="Please enter your email address."
                                 />
                                 <p class="help-block text-danger"></p>
                             </div>
-                            <div class="form-group"><textarea class="form-control" rows="7" id="message" name="message" placeholder="Your Message*" required="required" data-validation-required-message="Please enter your message."></textarea>
+                            <div class="form-group"><textarea class="form-control" rows="7" id="user_pesan" name="message" placeholder="Your Message*" required="required" data-validation-required-message="Please enter your message."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
-                            <div class="text-center"><button class="btn btn-block btn-round btn-d" id="cfsubmit" type="submit">Submit</button></div>
+                            <div class="text-center"><button id="link2" target="_blank" onclick="showInput();" class="btn btn-block btn-round btn-d" type="submit">Submit</button></div>
                         </form>
                         <div class="ajax-response font-alt" id="contactFormResponse"></div>
                     </div>
@@ -290,7 +300,43 @@ $profil = $query01->fetch_assoc();
             <!-- <div id="map"></div> -->
             <?php $queryfooter = $db->query("SELECT * from testimoni where id_testimoni = 2 AND aktif = 'Y'");
            $map = $queryfooter->fetch_assoc() ?>
-<?php echo $map['testimoni']; ?>
+            <?php echo $map['testimoni']; ?>
         </section>
 
         
+        <script>
+    var str = "<?php echo $rowcrumb['nomor_hp']; ?>";
+
+    function showInput() {
+
+    var a = document.getElementById("user_input").value;
+    var b = document.getElementById("user_email").value;
+    var c = document.getElementById("user_goal").value;
+    var d = document.getElementById("user_pesan").value;
+    var wa = "https://api.whatsapp.com/send?phone=";
+    var sap = "&text=Halo%20*shoelace.id*,%20Saya%20";
+	var enter = "%0A";
+	
+	if (a == "") {
+		alert("Mohon isi nama Anda dengan benar"); 
+		return false;
+	}
+	else if(b == "") {
+		alert("Mohon isi email Anda dengan benar");
+		return false;
+	}
+	else if(c == "") {
+		alert("Mohon isi kategori keperluan");
+		return false;
+	}
+	else if(d == "") {
+		alert("Mohon isi pesan Anda");
+		return false;
+  	} else {
+		var strLink = wa + str + sap + a + enter + b + enter + c + enter + d;
+		document.getElementById("link2").setAttribute("href", strLink);
+		console.log(strLink);
+	}
+
+    }
+    </script>
