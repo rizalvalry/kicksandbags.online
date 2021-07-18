@@ -184,6 +184,9 @@ $profil = $query01->fetch_assoc();
         }
         else
         {
+        $tab_menu .= '
+        <li><a class="wow fadeInUp" href="#'.$row["id_kategori"].'" href="#'.$row["id_kategori"].'" data-toggle="tab">'.$row["nama_kategori"].'</a></li>
+        ';
         $tab_content .= '
         <div id="'.$row["id_kategori"].'" class="tab-pane fade">
         ';
