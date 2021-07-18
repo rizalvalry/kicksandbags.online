@@ -167,7 +167,7 @@ $profil = $query01->fetch_assoc();
         <!-- tabs -->
         <?php
 
-        $tab_result = $db->query("SELECT kategori_produk.id_kategori, kategori_produk.nama_kategori FROM produk LEFT JOIN subkategori_produk ON produk.id_subkategori=subkategori_produk.id_subkategori LEFT JOIN kategori_produk ON subkategori_produk.id_kategori=kategori_produk.id_kategori WHERE produk.aktif = 'Y' ORDER BY id_kategori ASC");
+        $tab_result = $db->query("SELECT kategori_produk.id_kategori, kategori_produk.nama_kategori FROM produk LEFT JOIN subkategori_produk ON produk.id_subkategori=subkategori_produk.id_subkategori LEFT JOIN kategori_produk ON subkategori_produk.id_kategori=kategori_produk.id_kategori WHERE produk.aktif = 'Y' GROUP BY nama_kategori");
         $tab_menu = '';
         $tab_content = '';
         $i = 0;
