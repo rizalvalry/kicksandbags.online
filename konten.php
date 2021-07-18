@@ -186,7 +186,7 @@ $profil = $query01->fetch_assoc();
         {
         $tab_content .= '
         <li class="work-item illustration webdesign">
-                                        <a href="portfolio-single-1.html">
+                                        <a href="#alt-features" class="section-scroll">
                                             <div class="work-image"><img src="gambar/thumb_produk1/'.$sub_row['gambar'].'" alt="Portfolio Item" /></div>
                                             <div class="work-caption font-alt">
                                                 <h3 class="work-title">'.$sub_row["nama_produk"].'</h3>
