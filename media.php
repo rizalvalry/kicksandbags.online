@@ -75,6 +75,13 @@ $tahun = date("Y");
     <!-- Main stylesheet and color file-->
     <link href="assets/css/style.css" rel="stylesheet">
     <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
+
+    <!-- script daerah -->
+    <link rel="stylesheet" href="assets/select2-4.0.6-rc.1/dist/css/select2.min.css">
+    <script src="assets/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assets/select2-4.0.6-rc.1/dist/js/select2.min.js"></script>   
+    <script src="assets/select2-4.0.6-rc.1/dist/js/i18n/id.js"></script>   
+    <script src="assets/js/app.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
@@ -155,7 +162,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!--  JavaScripts
 =============================================-->
-    <script src="assets/lib/jquery/dist/jquery.js"></script>
+    <!-- <script src="assets/lib/jquery/dist/jquery.js"></script> -->
     <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets/lib/wow/dist/wow.js"></script>
     <script src="assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>

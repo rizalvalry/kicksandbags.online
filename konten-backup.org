@@ -266,7 +266,6 @@ $profil = $query01->fetch_assoc();
             </div>
         </div>
 
-
         <section class="module" id="contact">
             <div class="container">
                 <div class="row">
@@ -277,9 +276,9 @@ $profil = $query01->fetch_assoc();
                 </div>
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3">
-                        <form role="form" id="form-input" autocomplete="off">
+                        <form role="form" onsubmit="return showInput()" autocomplete="off">
                             <div class="form-group"><label class="sr-only" for="name">Name</label>
-                            <input class="form-control" type="text" id="nama" name="nama" placeholder="Nama*" data-validation-required-message="Please enter your name." autocomplete="false" required>
+                            <input class="form-control" type="text" id="user_input" name="name" placeholder="Nama*" data-validation-required-message="Please enter your name." autocomplete="false" required>
                                 <p class="help-block text-danger"></p>
                             </div>
                             <!-- <div class="form-group"><label class="sr-only" for="email">Email</label>
@@ -289,7 +288,7 @@ $profil = $query01->fetch_assoc();
 
                             <div class="form-group">
                             <label class="sr-only" for="provinsi">provinsi</label>
-                            <select name="domisili" class="form-control" id="domisili" autocomplete="false" required>
+                            <select name="propinsi" class="form-control" id="user_provinsi" autocomplete="false" required>
                                 <option value="" disabled selected>-- Pilih Provinsi --</option>
                                 <?php
                                     $query17       = $db->query("SELECT id_prov,nama_prov FROM prov ORDER BY nama_prov ASC");
@@ -302,7 +301,7 @@ $profil = $query01->fetch_assoc();
 
                             <div class="form-group">
                                 <label class="sr-only" for="kota">kota</label>
-                                <select name="kabkot" id="user_kota" class="form-control" autocomplete="false" required>
+                                <select name="kota" id="user_kota" class="form-control" autocomplete="false" required>
                                     <option value="" id="user_kota">-- Kota/Kabupaten --</option>
                                 </select>
                             </div>
@@ -315,20 +314,17 @@ $profil = $query01->fetch_assoc();
                             </div>
 
                             <div class="form-group"><label class="sr-only" for="phone">Phone</label>
-                            <input class="form-control" type="number" id="hp" name="hp" placeholder="Hp*" data-validation-required-message="Please enter your phone." autocomplete="false" required>
+                            <input class="form-control" type="number" id="user_goal" name="phone" placeholder="Hp*" data-validation-required-message="Please enter your phone." autocomplete="false" required>
                                 <p class="help-block text-danger"></p>
                             </div>
-                            
                             <div class="form-group">
-                                <textarea class="form-control" rows="7" id="pesan" name="pesan" placeholder="Pesanmu*" data-validation-required-message="Please enter your message."></textarea>
+                                <textarea class="form-control" rows="7" id="user_pesan" name="message" placeholder="Pesanmu*" data-validation-required-message="Please enter your message."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
 
-                            <div class="text-center">
-                            <button type="submit" id="tombol-simpan" class="btn btn-block btn-round btn-d">Submit</button>
-                            </div>
+                            <div class="text-center"><a id="link2" target="_blank" onclick="showInput();" class="btn btn-block btn-round btn-d" type="submit">Submit</a></div>
                         </form>
-                        <!-- <div class="ajax-response font-alt" id="contactFormResponse"></div> -->
+                        <div class="ajax-response font-alt" id="contactFormResponse"></div>
                     </div>
                 </div>
             </div>
@@ -341,71 +337,13 @@ $profil = $query01->fetch_assoc();
             <?php echo $map['testimoni']; ?>
         </section>
 
-
-        <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
-
-
-    <script>
-        $(document).ready(function () {
-            // update();
-        });
-        $("#tombol-simpan").click(function () {
-            //validasi form
-            $('#form-input').validate({
-                rules: {
-                    nama: {
-                        required: true
-                    },
-                    domisili: {
-                        required: true
-                    },
-                    kabkot: {
-                        required: true
-                    },
-                    kec: {
-                        required: true
-                    },
-                    hp: {
-                        required: true
-                    },
-                    pesan: {
-                        required: true
-                    }
-                },
-                //jika validasi sukses maka lakukan
-                submitHandler: function (form) {
-                    $.ajax({
-                        type: 'POST',
-                        url: "simpan.php",
-                        data: $('#form-input').serialize(),
-                        success: function () {
-                            //setelah simpan data, update data terbaru
-                            // update();
-                            location.href = "bodyonload.php";
-                        }
-                    });
-                    //kosongkan form nama dan domisili
-                    document.getElementById("nama").value = "";
-                    document.getElementById("domisili").value = "";
-                    document.getElementById("kabkot").value = "";
-                    document.getElementById("kec").value = "";
-                    document.getElementById("hp").value = "";
-                    document.getElementById("pesan").value = "";
-                }
-            });
-        });
-    </script>
-
-
         <!-- script daerah -->
         <script type="text/javascript">
         var htmlobjek;
         $(document).ready(function(){
         //apabila terjadi event onchange terhadap object <select id=propinsi>
-        $("#domisili").change(function(){
-            var propinsi = $("#domisili").val();
+        $("#user_provinsi").change(function(){
+            var propinsi = $("#user_provinsi").val();
             $.ajax({
                 url: "ambilkota.php",
                 data: "propinsi="+propinsi,
@@ -433,4 +371,49 @@ $profil = $query01->fetch_assoc();
 	</script>
     <!-- ending daerah script -->
 
-    
+    <script>
+    var str = "<?php echo $rowcrumb['nomor_hp']; ?>";
+
+    function showInput() {
+
+            var a = document.getElementById("user_input").value;
+            var b = document.getElementsByName('propinsi')[0].value;
+            var b2 = document.getElementsByName('kota')[0].value;
+            var b3 = document.getElementsByName('kec')[0].value;
+            var c = document.getElementById("user_goal").value;
+            var d = document.getElementById("user_pesan").value;
+            var wa = "https://api.whatsapp.com/send?phone=";
+            var sap = "&text=Halo%20*KicksandBags*,%0ASaya%20";
+            var enter = "%0A";
+            
+            if (a == "") {
+                alert("Mohon isi nama Anda dengan benar"); 
+                return false;
+            }
+            else if(b == "") {
+                alert("Mohon isi provinsi Anda dengan benar");
+                return false;
+            }
+            else if(b2 == "") {
+                alert("Mohon isi kota Anda dengan benar");
+                return false;
+            }
+            else if(b3 == "") {
+                alert("Mohon isi kecamatan Anda dengan benar");
+                return false;
+            }
+            else if(c == "") {
+                alert("Mohon isi Telepon Anda dengan benar");
+                return false;
+            }
+            else if(d == "") {
+                alert("Mohon isi pesan Anda");
+                return false;
+            } else {
+                var strLink = wa + str + sap + a + enter + b + enter + b2 + enter + b3 + enter + c + enter + d;
+                document.getElementById("link2").setAttribute("href", strLink);
+                console.log(strLink);
+            }
+
+    }
+    </script>
