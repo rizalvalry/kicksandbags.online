@@ -1,0 +1,24 @@
+[30-Nov-2021 16:30:11 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'u4920924_rizal'@'localhost' (using password: YES) in /home/n1116126/public_html/kicksandbags.online/connect.php on line 3
+[30-Nov-2021 16:30:11 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 13
+[30-Nov-2021 16:30:11 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 14
+[30-Nov-2021 16:30:11 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 17
+[30-Nov-2021 16:30:11 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 18
+[30-Nov-2021 16:30:11 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 26
+[30-Nov-2021 16:30:11 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 27
+[30-Nov-2021 16:30:11 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 29
+[30-Nov-2021 16:30:11 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 30
+[30-Nov-2021 16:30:11 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 32
+[30-Nov-2021 16:30:11 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 33
+[10-Dec-2021 04:16:55 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'u4920924_rizal'@'localhost' (using password: YES) in /home/n1116126/public_html/kicksandbags.online/connect.php on line 3
+[10-Dec-2021 04:16:55 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/n1116126/public_html/kicksandbags.online/simpan.php on line 12
+[10-Dec-2021 04:16:55 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'u4920924_rizal'@'localhost' (using password: YES) in /home/n1116126/public_html/kicksandbags.online/connect.php on line 3
+[10-Dec-2021 04:16:55 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 13
+[10-Dec-2021 04:16:55 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 14
+[10-Dec-2021 04:16:55 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 17
+[10-Dec-2021 04:16:55 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 18
+[10-Dec-2021 04:16:55 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 26
+[10-Dec-2021 04:16:55 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 27
+[10-Dec-2021 04:16:55 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 29
+[10-Dec-2021 04:16:55 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 30
+[10-Dec-2021 04:16:55 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 32
+[10-Dec-2021 04:16:55 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/n1116126/public_html/kicksandbags.online/bodyonload.php on line 33

@@ -267,7 +267,7 @@ $profil = $query01->fetch_assoc();
         </div>
 
 
-        <section class="module" id="contact">
+        <!-- <section class="module" id="contact">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3">
@@ -282,10 +282,7 @@ $profil = $query01->fetch_assoc();
                             <input class="form-control" type="text" id="nama" name="nama" placeholder="Nama*" data-validation-required-message="Please enter your name." autocomplete="false" required>
                                 <p class="help-block text-danger"></p>
                             </div>
-                            <!-- <div class="form-group"><label class="sr-only" for="email">Email</label>
-                            <input class="form-control" type="email" id="user_email" name="email" placeholder="Email*" data-validation-required-message="Please enter your email address." autocomplete="false" required>
-                                <p class="help-block text-danger"></p>
-                            </div> -->
+                          
 
                             <div class="form-group">
                             <label class="sr-only" for="provinsi">provinsi</label>
@@ -328,11 +325,14 @@ $profil = $query01->fetch_assoc();
                             <button type="submit" id="tombol-simpan" class="btn btn-block btn-round btn-d">Submit</button>
                             </div>
                         </form>
-                        <!-- <div class="ajax-response font-alt" id="contactFormResponse"></div> -->
+                       
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
+
+
+        
 
         <section id="map-section">
             <!-- <div id="map"></div> -->

@@ -30,6 +30,7 @@ $tahun = date("Y");
         })(window,document,'script','dataLayer','GTM-TMGGBCH');</script>
         <!-- End Google Tag Manager -->
 
+    <meta name="facebook-domain-verification" content="mmgy5nkse6qx8jp3xt95jxd66mjwaa" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -82,6 +83,27 @@ $tahun = date("Y");
     <script src="assets/select2-4.0.6-rc.1/dist/js/select2.min.js"></script>   
     <script src="assets/select2-4.0.6-rc.1/dist/js/i18n/id.js"></script>   
     <script src="assets/js/app.js"></script>
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '385044909611182');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=385044909611182&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
 </head>
 
 <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
@@ -120,6 +142,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <?php include "tengah.php";?>
     <!-- end main body -->
 
+   
+<a href="https://api.whatsapp.com/send?phone=<?= $row00['nomor_hp']; ?>&text=Halo%21%20kicksandbags,%20" class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
+
 
     <footer class="footer bg-dark">
             <div class="container">
@@ -142,23 +169,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
     </main>
 
-        <!-- Facebook Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '385044909611182');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=385044909611182&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Facebook Pixel Code -->
+        
+    
 
     <!--  JavaScripts
 =============================================-->
